@@ -2,8 +2,8 @@ POST http://localhost:5001/api/auth/register
 Content-Type: application/json
 
 {
-    "username": "admin",
-    "password": "root"
+    "username": "khoata0605",
+    "password": "12345"
 }
 
 ###
@@ -14,3 +14,35 @@ Content-Type: application/json
     "username": "admin",
     "password": "root"
 }
+
+###
+POST http://localhost:5001/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU3OTE2MWY2YzkxYTg4MGMyN2Q4MjQiLCJpYXQiOjE2NTkzNDQ2MTh9.9JTi3m2hwQa1bSwWcHhKk5Wa3P0syHBXR5oQz2rV8V8
+
+{
+    "title": "Javascript basic",
+    "description": "JS development",
+    "url": "fullstack.edu.vn",
+    "status": "LEARNING"
+}
+
+###
+GET http://localhost:5001/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU3NTk0ZDc1YzY4MDMzN2VmNTIwNTkiLCJpYXQiOjE2NTkzNDY5NDF9.Y7UTuEnDth-C9-V4OnWdoFOHk-EOxh8y9Ejp5K2TAqo
+
+###
+PUT http://localhost:5001/api/posts/62e790a146131ff0a3461743
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU3NTk0ZDc1YzY4MDMzN2VmNTIwNTkiLCJpYXQiOjE2NTkzNDY5NDF9.Y7UTuEnDth-C9-V4OnWdoFOHk-EOxh8y9Ejp5K2TAqo
+
+{
+    "title": "VueJS",
+    "description": "Vueeeee",
+    "url": "https://vuejs.org",
+    "status": "LEARNING"
+}
+
+###
+DELETE http://localhost:5001/api/posts/62e790a146131ff0a3461743
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU3NTk0ZDc1YzY4MDMzN2VmNTIwNTkiLCJpYXQiOjE2NTkzNDY5NDF9.Y7UTuEnDth-C9-V4OnWdoFOHk-EOxh8y9Ejp5K2TAqo

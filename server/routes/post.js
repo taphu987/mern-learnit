@@ -1,28 +1,28 @@
 const express = require('express');
 
 const router = express.Router();
+const verifyToken = require('../middlewares/auth');
 
-const Post = require('../models/Post');
+const PostController = require('../controllers/PostController');
+
+// @route GET /api/posts
+// @desc Get posts
+// @access private
+router.get('/', verifyToken, PostController.getPosts);
 
 // @route POST /api/posts
 // @desc Create post
 // @access private
+router.post('/', verifyToken, PostController.createPosts);
 
-router.post('/', async (req, res) => {
-    const { title, description, url, status } = req.body;
+// @route PUT /api/posts
+// @desc Update post
+// @access private
+router.put('/:id', verifyToken, PostController.updatePosts);
 
-    // Simple validation
-    if (!title)
-        return res
-            .status(400)
-            .json({ success: false, message: 'Title is required' });
+// @route DELETE /api/posts
+// @desc Delete post
+// @access private
+router.delete('/:id', verifyToken, PostController.deletePosts);
 
-    try {
-        const newPost = new Post({
-            title: title,
-            description: description,
-            url: url.startsWith('https://') ? url : `https://${url}`,
-            status: status || 'TO LEARN',
-        });
-    } catch (error) {}
-});
+module.exports = router;
