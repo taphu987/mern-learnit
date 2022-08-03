@@ -1,4 +1,3 @@
-const { verify } = require('argon2');
 const jwt = require('jsonwebtoken');
 
 const verifyToken = (req, res, next) => {
