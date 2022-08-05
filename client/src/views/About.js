@@ -1,7 +1,5 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Button, Row, Col } from 'react-bootstrap';
 
 const About = () => {
     return (

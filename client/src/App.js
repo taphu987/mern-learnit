@@ -7,39 +7,42 @@ import AuthContextProvider from './contexts/AuthContext';
 import Dashboard from './views/Dashboard';
 import About from './views/About';
 import ProtectedRoute from './components/routing/ProtectedRoute';
+import PostContextProvider from './contexts/PostContext';
 
 function App() {
     return (
         <AuthContextProvider>
-            <Router>
-                <Switch>
-                    <Route exact path="/" component={Landing} />
+            <PostContextProvider>
+                <Router>
+                    <Switch>
+                        <Route exact path="/" component={Landing} />
 
-                    <Route
-                        exact
-                        path="/login"
-                        render={(props) => (
-                            <Auth {...props} authRoute="login" />
-                        )}
-                    />
+                        <Route
+                            exact
+                            path="/login"
+                            render={(props) => (
+                                <Auth {...props} authRoute="login" />
+                            )}
+                        />
 
-                    <Route
-                        exact
-                        path="/register"
-                        render={(props) => (
-                            <Auth {...props} authRoute="register" />
-                        )}
-                    />
+                        <Route
+                            exact
+                            path="/register"
+                            render={(props) => (
+                                <Auth {...props} authRoute="register" />
+                            )}
+                        />
 
-                    <ProtectedRoute
-                        exact
-                        path="/dashboard"
-                        component={Dashboard}
-                    />
+                        <ProtectedRoute
+                            exact
+                            path="/dashboard"
+                            component={Dashboard}
+                        />
 
-                    <ProtectedRoute exact path="/about" component={About} />
-                </Switch>
-            </Router>
+                        <ProtectedRoute exact path="/about" component={About} />
+                    </Switch>
+                </Router>
+            </PostContextProvider>
         </AuthContextProvider>
     );
 }

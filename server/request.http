@@ -18,18 +18,18 @@ Content-Type: application/json
 ###
 POST http://localhost:5001/api/posts
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU3OTE2MWY2YzkxYTg4MGMyN2Q4MjQiLCJpYXQiOjE2NTkzNDQ2MTh9.9JTi3m2hwQa1bSwWcHhKk5Wa3P0syHBXR5oQz2rV8V8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU3NTk0ZDc1YzY4MDMzN2VmNTIwNTkiLCJpYXQiOjE2NTk1Nzc4NTN9.JVn8OHqviHtaqFyAobw5NOXgZczu0ccTB1GQdONcD2s
 
 {
-    "title": "Javascript basic",
-    "description": "JS development",
+    "title": "ReactJS",
+    "description": "Learn ReactJS on the web",
     "url": "fullstack.edu.vn",
-    "status": "LEARNING"
+    "status": "TO LEARN"
 }
 
 ###
 GET http://localhost:5001/api/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU3NTk0ZDc1YzY4MDMzN2VmNTIwNTkiLCJpYXQiOjE2NTkzNDY5NDF9.Y7UTuEnDth-C9-V4OnWdoFOHk-EOxh8y9Ejp5K2TAqo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmU3NTk0ZDc1YzY4MDMzN2VmNTIwNTkiLCJpYXQiOjE2NTk1Nzc4NTN9.JVn8OHqviHtaqFyAobw5NOXgZczu0ccTB1GQdONcD2s
 
 ###
 PUT http://localhost:5001/api/posts/62e790a146131ff0a3461743

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useContext } from 'react';
 import { Redirect } from 'react-router-dom';
-import Spinner from 'react-bootstrap/Spinner';
+import { Spinner } from 'react-bootstrap';
 
 import LoginForm from '../components/auth/LoginForm';
 import RegisterForm from '../components/auth/RegisterForm';
