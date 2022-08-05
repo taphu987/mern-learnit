@@ -1,7 +1,7 @@
 export const apiUrl =
     process.env.NODE_ENV !== 'production'
         ? 'http://localhost:5001/api'
-        : 'someDeployURL';
+        : 'https://secret-reef-13322.herokuapp.com/api';
 
 export const LOCAL_STORAGE_TOKEN_NAME = 'mern-learnit';
 
